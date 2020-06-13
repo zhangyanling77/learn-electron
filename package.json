@@ -1,0 +1,20 @@
+{
+  "name": "learn-electron",
+  "version": "1.0.0",
+  "description": "根据《Electron实战入门、进阶与性能优化》、《跨平台桌面应用开发基于Electron与NW.js》两书学习Electron",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhangyanling77/learn-electron.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zhangyanling77/learn-electron/issues"
+  },
+  "homepage": "https://github.com/zhangyanling77/learn-electron#readme"
+}
