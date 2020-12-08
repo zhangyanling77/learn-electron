@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- <button id="btn">喜爱排行榜</button>
+  <div id="food"></div> -->
+  <!-- <button id="btn">打开新窗口</button> -->
+  <!-- <h1>Menu</h1> -->
+  <!-- <h2>
+    <a id="aHref" href="https://www.electronjs.org/">electron 官网</a>
+  </h2> -->
+  <!-- <h1>嵌入页面</h1> -->
+  <button id="btn">打开子窗口</button>
+  <div id="message"></div>
+  <!-- <script src="render/index.js"></script> -->
+  <script>
+    const btn = document.getElementById('btn');
+    btn.onclick = () => {
+      window.open('son.html');
+    }
+    const message = document.getElementById('message');
+    window.addEventListener('message', msg => {
+      message.innerHTML = msg.data;
+    })
+  </script>
+</body>
+</html>
