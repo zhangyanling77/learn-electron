@@ -14,10 +14,22 @@
     <a id="aHref" href="https://www.electronjs.org/">electron 官网</a>
   </h2> -->
   <!-- <h1>嵌入页面</h1> -->
-  <button id="btn">打开子窗口</button>
-  <div id="message"></div>
-  <!-- <script src="render/index.js"></script> -->
-  <script>
+  <!-- <button id="btn">打开子窗口</button>
+  <div id="message"></div> -->
+  <!-- <button id="btn">打开文件</button> -->
+  <!-- <button id="btn">保存对话框</button> -->
+  <!-- <button id="btn">消息对话框</button> -->
+  <!-- <h1>断网提醒</h1> -->
+  <!-- <button id="btn">通知消息</button> -->
+  <!-- <h1>全局注册快捷键</h1> -->
+  <h1>剪贴板的操作</h1>
+  <div>
+    复制的信息：<span id="message">您好，zhangyanling！</span><button id="btn">点击复制</button>
+  </div>
+  <h2 id="txt"></h2>
+
+  <script src="render/index.js"></script>
+  <!-- <script>
     const btn = document.getElementById('btn');
     btn.onclick = () => {
       window.open('son.html');
@@ -26,6 +38,17 @@
     window.addEventListener('message', msg => {
       message.innerHTML = msg.data;
     })
-  </script>
+  </script> -->
+  <!-- <script>
+    const btn = document.getElementById('btn');
+    const option = {
+      title: '新消息提醒',
+      body: '你有新的消息需要阅读'
+    };
+
+    btn.onclick = function() {
+      new window.Notification(option.title, option);
+    }
+  </script> -->
 </body>
 </html>
