@@ -15,6 +15,6 @@ app.on('ready', () => {
   if (isDev) {
     win.loadURL('http://localhost:3000'); // 加载页面
   } else {
-    win.loadFile(path.resolve(__dirname, '../renderer/pages/control/index.html'));
+    win.loadFile(path.resolve(__dirname, '../renderer/pages/main/index.html'));
   }
 })
