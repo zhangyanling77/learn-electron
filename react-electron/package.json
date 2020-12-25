@@ -4,15 +4,21 @@
   "description": "",
   "main": "app/main/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start:main": "electron .",
-    "start:render": "cd app/renderer/src/main && npm start"
+    "start:render": "cd app/renderer/src/main && npm start",
+    "start": "concurrently \"npm run start:render\" \" wait-on http://localhost:3000 && npm run start:main\" "
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "electron": "^10.1.5",
-    "electron-is-dev": "^1.2.0"
+    "@types/concurrently": "^5.2.1",
+    "@types/electron": "^1.6.10",
+    "@types/electron-is-dev": "^1.1.1",
+    "@types/wait-on": "^5.2.0",
+    "concurrently": "^5.3.0",
+    "electron": "^11.1.1",
+    "electron-is-dev": "^1.2.0",
+    "wait-on": "^5.2.0"
   }
 }
