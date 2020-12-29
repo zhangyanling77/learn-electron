@@ -1,20 +1,8 @@
-const { app, BrowserWindow } = require('electron');
-const isDev = require('electron-is-dev');
-const path = require('path');
-
-let win;
+const { app } = require('electron');
+const { create: createMainWindow } = require('./windows/main'); // 创建一个主窗口
+const handleIPC = require('./ipc'); // 处理主进程的事务
 
 app.on('ready', () => {
-  win = new BrowserWindow({
-    width: 600,
-    height: 600,
-    webPreferences: {
-      nodeIntegration: true, // 允许使用node相关的
-    }
-  });
-  if (isDev) {
-    win.loadURL('http://localhost:3000'); // 加载页面
-  } else {
-    win.loadFile(path.resolve(__dirname, '../renderer/pages/main/index.html'));
-  }
+  handleIPC();
+  createMainWindow(); // 主窗口渲染App.js的页面内容
 })
